@@ -3,11 +3,11 @@ import os
 oldlinecount=0
 oldsizeoffile=0
 os.chdir("./log")
-
+url="logfile2.log"
 while(True):
-    f = open("logfile2.log", "rb")
+    f = open(url, "rb")
     linecount = f.readlines().__len__()
-    sizeoffile = os.path.getsize("logfile2.log")
+    sizeoffile = os.path.getsize(url)
 
     if oldlinecount < linecount and oldsizeoffile < sizeoffile:
         f.seek(oldsizeoffile-sizeoffile, os.SEEK_END)
